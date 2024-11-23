@@ -19,7 +19,7 @@ public class AutonomousPentagon extends SequentialCommandGroup {
         for(int count=0;count<5;count++){
             addCommands(
                 new DriveDistance(0.5, 10, drivetrain),
-                new TurnDegrees(0.5,252, drivetrain)
+                new TurnDegrees(-0.5,108, drivetrain)
             );
         }
     }
