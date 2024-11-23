@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.commands.ArcadeDrive;
 import frc.robot.commands.AutonomousDistance;
+import frc.robot.commands.AutonomousPentagon;
 import frc.robot.commands.AutonomousTime;
 import frc.robot.commands.AutonomousTriangle;
 import frc.robot.subsystems.Drivetrain;
@@ -72,7 +73,7 @@ public class RobotContainer {
         .onFalse(new PrintCommand("Button A Released"));
 
     // Setup SmartDashboard options
-    m_chooser.setDefaultOption("Auto Routine Distance", new AutonomousTriangle(m_drivetrain));
+    m_chooser.setDefaultOption("Auto Routine Distance", new AutonomousPentagon(m_drivetrain));
     m_chooser.addOption("Auto Routine Time", new AutonomousTime(m_drivetrain));
     SmartDashboard.putData(m_chooser);
   }
